@@ -10,5 +10,10 @@ namespace Psychotest
     {
         string nazwa;
         List<string> wartosci;
+        public Atrybut(string n, List<string> w)
+        {
+            this.nazwa = n;
+            
+        }
     }
 }
