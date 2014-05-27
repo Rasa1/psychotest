@@ -9,7 +9,7 @@ namespace Psychotest
     class Atrybut
     {
         public string nazwa;//nazwa atrybutu np.:outlook albo windy
-        List<string> mozliwosci;//lista możliwości np.:[sunny, overcast, rain]
+        public List<string> mozliwosci;//lista możliwości np.:[sunny, overcast, rain]
 
         public void AddMozliwosc(string m)//tej metody możesz użyć żeby dodawać kolejne możliwości jedna po drugiej 
         {
@@ -20,6 +20,18 @@ namespace Psychotest
             this.nazwa = kopiuj_z.nazwa;
             for (int i = 0; i < kopiuj_z.mozliwosci.Count; i++)
                 this.mozliwosci[i] = kopiuj_z.mozliwosci[i];
+        }
+
+        public int GetIndex(string wartosc)
+        {
+            for (int i = 0; i < this.mozliwosci.Count; i++)
+            {
+                if (this.mozliwosci[i].Equals(wartosc))
+                {
+                    return i;
+                }
+            }
+            return -1;//błąd
         }
 
         Atrybut(string n)
