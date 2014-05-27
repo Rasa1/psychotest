@@ -10,6 +10,7 @@ namespace Psychotest
     {
         static void Main(string[] args)
         {
+            //dupa i cycki
         }
     }
 }
