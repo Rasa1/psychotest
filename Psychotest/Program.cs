@@ -16,7 +16,7 @@ namespace Psychotest
 
     class MojTest
     {
-        
+        //penis 8=====D
     }
 
     class MojTesty
