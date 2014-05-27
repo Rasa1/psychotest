@@ -10,7 +10,7 @@ namespace Psychotest
     {
         static void Main(string[] args)
         {
-            
+            //Cycki （ 。 ㅅ  。）
         }
     }
 
