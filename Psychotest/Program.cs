@@ -18,4 +18,9 @@ namespace Psychotest
     {
         
     }
+    
+    class MojTesty
+    {
+
+    }
 }
