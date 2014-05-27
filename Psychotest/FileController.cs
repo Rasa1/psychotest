@@ -9,7 +9,7 @@ namespace Psychotest
 {
     class FileController
     {
-    
+        /*
         public void readFile(string fileName)
         {
             using (StreamReader sr = new StreamReader("TestFile.txt")) 
@@ -22,7 +22,7 @@ namespace Psychotest
                     
                 }
             }
-        }
+        }*/
     
     }
 }
