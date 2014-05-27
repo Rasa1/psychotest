@@ -10,19 +10,11 @@ namespace Psychotest
     {
         static void Main(string[] args)
         {
-            //dupa i cyckia
+            
         }
     }
 
-    class MojTest
-    {
-        //penis 8=====D
-    }
 
-    class MojTesty
-    {
-
-    }
     
     
 }
