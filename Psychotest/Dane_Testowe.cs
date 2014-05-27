@@ -9,6 +9,6 @@ namespace Psychotest
     class Dane_Testowe
     {
         List<Atrybut> Lista_Atrybutow;
-
+        int[,] tab_test;
     }
 }
