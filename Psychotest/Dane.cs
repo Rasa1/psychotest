@@ -79,7 +79,7 @@ namespace Psychotest
             double wynik = 0;
             for (int i = 0; i < ilosci_wystapien.Length; i++)
             {
-                double p = ilosci_wystapien[i] / wier;
+                double p = (double)ilosci_wystapien[i] / (double)wier;
                 wynik += p * Math.Log(p);
             }
             return -wynik;
@@ -107,11 +107,12 @@ namespace Psychotest
                 double wynik_posredni = 0;
                 for (int j = 0; j < wystapienia_na.Length; j++)
                 {
-                    double p=wystapienia_na[j]/wystapienia;
-                    wynik_posredni += p * Math.Log(p);
+                    double p=(double)wystapienia_na[j]/(double)wystapienia;
+                    if (p != 0)
+                        wynik_posredni += p * Math.Log(p);
                 }
                 //split -= (wystapienia / this.wier) * Math.Log(wystapienia / this.wier);
-                wynik += (wystapienia / this.wier) * (-wynik_posredni);
+                wynik += ((double)wystapienia / (double)this.wier) * (-wynik_posredni);
             }
             return wynik;///split;
         }
@@ -127,7 +128,7 @@ namespace Psychotest
                     if (this.dane_treningowe[j, atrybut] == i)
                         wystapienia++;
                 }
-                wynik -= (wystapienia / this.wier) * Math.Log(wystapienia / this.wier);
+                wynik -= ((double)wystapienia / (double)this.wier) * Math.Log((double)wystapienia / (double)this.wier);
             }
             return wynik;
         }
