@@ -11,9 +11,35 @@ namespace Psychotest
         public string nazwa;//nazwa atrybutu np.:outlook albo windy
         public List<string> mozliwosci;//lista możliwości np.:[sunny, overcast, rain]
 
+        public Atrybut(string n)
+        {
+            this.nazwa = n;
+        }
+        public Atrybut(string n, string[] m)
+        {
+            this.nazwa = n;
+            for (int i = 0; i < m.Length; i++)
+                this.mozliwosci.Add(m[i]);
+        }
+        public Atrybut(string n, List<string> m)
+        {
+            this.nazwa = n;
+            for (int i = 0; i < m.Count; i++)
+                this.mozliwosci.Add(m[i]);
+        }
+
+
         public void AddMozliwosc(string m)//tej metody możesz użyć żeby dodawać kolejne możliwości jedna po drugiej 
         {
-            this.mozliwosci.Add(m);
+            try
+            {
+                this.mozliwosci.Add(m);
+            }
+            catch (Exception)
+            {
+                return;
+                throw;
+            }
         }
         public void Coppy(Atrybut kopiuj_z)
         {
@@ -34,21 +60,6 @@ namespace Psychotest
             return -1;//błąd
         }
 
-        Atrybut(string n)
-        {
-            this.nazwa = n;
-        }
-        Atrybut(string n,string[] m)
-        {
-            this.nazwa = n;
-            for (int i = 0; i < m.Length; i++)
-                this.mozliwosci.Add(m[i]);
-        }
-        Atrybut(string n, List<string> m)
-        {
-            this.nazwa = n;
-            for (int i = 0; i < m.Count; i++)
-                this.mozliwosci.Add(m[i]);
-        }
+        
     }
 }

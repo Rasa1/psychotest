@@ -11,6 +11,9 @@ namespace Psychotest
         static void Main(string[] args)
         {
             //Cycki （ 。 ㅅ  。）
+            Atrybut atr = new Atrybut("dupa");
+            atr.AddMozliwosc("xxx");
+            return;
         }
     }
 
