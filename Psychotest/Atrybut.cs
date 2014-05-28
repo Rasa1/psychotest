@@ -11,19 +11,26 @@ namespace Psychotest
         public string nazwa;//nazwa atrybutu np.:outlook albo windy
         public List<string> mozliwosci;//lista możliwości np.:[sunny, overcast, rain]
 
+        public Atrybut()
+        {
+            this.mozliwosci = new List<string>();
+        }
         public Atrybut(string n)
         {
             this.nazwa = n;
+            this.mozliwosci=new List<string>();
         }
         public Atrybut(string n, string[] m)
         {
             this.nazwa = n;
+            this.mozliwosci = new List<string>();
             for (int i = 0; i < m.Length; i++)
                 this.mozliwosci.Add(m[i]);
         }
         public Atrybut(string n, List<string> m)
         {
             this.nazwa = n;
+            this.mozliwosci = new List<string>();
             for (int i = 0; i < m.Count; i++)
                 this.mozliwosci.Add(m[i]);
         }

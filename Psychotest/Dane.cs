@@ -15,12 +15,16 @@ namespace Psychotest
 
         public Dane(int kolumny, int wiersze)
         {
+            this.odpowiedzi = new List<string>();
+            this.atrybuty = new List<Atrybut>();
             this.kol = kolumny;
             this.wier = wiersze;
             this.dane_treningowe = new int[wier, kol + 1];
         }
         public Dane(int kolumny, int wiersze, List<Atrybut> attr, List<string> odp)
         {
+            this.odpowiedzi = new List<string>();
+            this.atrybuty = new List<Atrybut>();
             this.kol = kolumny;
             this.wier = wiersze;
             this.dane_treningowe = new int[wier, kol + 1];
@@ -31,6 +35,8 @@ namespace Psychotest
         }
         public Dane(int kolumny, int wiersze, List<string> odp)
         {
+            this.odpowiedzi = new List<string>();
+            this.atrybuty = new List<Atrybut>();
             this.kol = kolumny;
             this.wier = wiersze;
             this.dane_treningowe = new int[wier, kol + 1];
@@ -39,6 +45,8 @@ namespace Psychotest
         }
         public Dane(int kolumny, int wiersze, string[] odp)
         {
+            this.odpowiedzi = new List<string>();
+            this.atrybuty = new List<Atrybut>();
             this.kol = kolumny;
             this.wier = wiersze;
             this.dane_treningowe = new int[wier, kol + 1];
